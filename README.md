@@ -18,10 +18,14 @@ You may need to install the following packages for this specific kernel:
 $ sudo apt-get install linux-tools-3.16.0-50-generic linux-cloud-tools-3.16.0-50-generic
 
 ## Perf權限設定:
-$ sudo su # As Root
+$ sudo su
 
 $ sysctl -w kernel.perf_event_paranoid=-1
 
 $ echo 0 > /proc/sys/kernel/kptr_restrict
 
 $ Exit
+
+## Perf執行範例 for array_bad.c:
+$ gcc array_bad.c -o array_bad
+$ perf stat ./array_bad
