@@ -37,9 +37,9 @@ int main(){
 	//quickSort(data, 0, data_size-1);
 	
 	int sum = 0;
-	for (int i = 0; i < data_size; i++)
+	for (int cunt = 0; cunt < data_size; cunt++)
 	{
-		for (int x = 0; x < data_size; x++)
+		for (int i = 0; i < data_size; i++)
 		{
 			if (data[i] >= 128) { // 故意選 256 一半  
 				sum += data[i];
