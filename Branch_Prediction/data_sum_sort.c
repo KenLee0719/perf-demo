@@ -2,7 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 #define SWAP(x,y) {int t; t = x; x = y; y = t;}
-
+void bubble_sort(int array[], int n) {
+    for (int i=0; i<n-1; i++) {
+        for (int j=0; j<n-i-1; j++) {
+            if (array[j] > array[j+1]) {
+                int temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+    }
+}
 void quickSort(int number[], int left, int right) { 
     if(left < right) { 
         int s = number[(left+right)/2]; 
@@ -34,7 +44,7 @@ int main(){
 	{
 		data[i] = rand() % (max - min + 1) + min;
 	}
-	quickSort(data, 0, data_size-1);
+	bubble_sort(data, data_size);
 	
 	int sum = 0;
 	for (int i = 0; i < data_size; i++)
