@@ -49,8 +49,11 @@ int main(){
 	int sum = 0;
 	for (int i = 0; i < data_size; i++)
 	{
-		if (data[i] >= 128) { // 故意選 256 一半  
-			sum += data[i];
+		for (int x = 0; x < data_size; x++)
+		{
+			if (data[i] >= 128) { // 故意選 256 一半  
+				sum += data[i];
+			}
 		}
 	}
 	printf("Sum = %d \n",sum);
