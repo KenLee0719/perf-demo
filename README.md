@@ -28,4 +28,5 @@ $ Exit
 
 ## Perf執行範例 for array_bad.c:
 $ gcc array_bad.c -o array_bad
+
 $ perf stat ./array_bad
