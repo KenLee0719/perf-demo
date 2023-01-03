@@ -30,3 +30,7 @@ $ Exit
 $ gcc array_bad.c -o array_bad
 
 $ perf stat ./array_bad
+
+如果要使用 perf annotate，需加入 -g3 啟動除錯模式
+
+$ gcc array_bad.c -o array_bad
